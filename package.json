@@ -1,6 +1,6 @@
 {
-	"name": "vitepress-sidebar-layout",
-	"version": "1.0.0",
+	"name": "@josefhu2002/vitepress-sidebar-layout",
+	"version": "1.0.2",
 	"description": "vitepress 自定义主题",
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -12,11 +12,22 @@
 			"require": "./dist/index.cjs",
 			"types": "./dist/index.d.ts"
 		},
-		"./style.css": "./dist/style.css"
+		"./style.css": "./dist/style.css",
+		"./content/blog.data": {
+			"import": "./dist/content/blog.data.js",
+			"require": "./dist/content/blog.data.cjs"
+		},
+		"./photos/photos.data": {
+			"import": "./dist/photos/photos.data.js",
+			"require": "./dist/photos/photos.data.cjs"
+		}
 	},
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"build": "vite build",
 		"prepublishOnly": "npm run build"
