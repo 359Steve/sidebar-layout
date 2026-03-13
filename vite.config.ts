@@ -28,8 +28,10 @@ export default defineConfig({
 		}),
 		dts({
 			include: ['packages/theme/**/*.ts', 'packages/theme/**/*.vue'],
+			exclude: ['node_modules/**'],
 			outDir: 'dist',
 			insertTypesEntry: true,
+			skipDiagnostics: true,
 		}),
 	],
 	build: {

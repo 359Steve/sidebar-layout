@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { StyleValue } from 'vue';
 import { blurhashToGradientCssObject } from '@unpic/placeholder';
 import photos from '../../photos/data';
 
@@ -17,7 +18,7 @@ const translate = ref<boolean>(true);
 					src: photo.url,
 					alt: '照片墙',
 				}" class="w-full" :src="photo.url" :alt="photo.text" :data-photo-index="idx"
-					:style="photo.blurhash && translate ? (blurhashToGradientCssObject(photo.blurhash) as any) : ''"
+					:style="photo.blurhash && translate ? (blurhashToGradientCssObject(photo.blurhash) as StyleValue) : {}"
 					loading="lazy"
 					:class="!translate ? 'object-contain sm:aspect-square' : 'aspect-square object-cover'" />
 			</div>

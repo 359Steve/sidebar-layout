@@ -4,7 +4,7 @@ import type { PressFooter } from '../../types/vitepress-types';
 const { theme } = useData<{
 	footer: PressFooter;
 }>();
-const { copyright, message } = theme.value.footer;
+const { copyright, message } = theme.value.footer ?? {};
 </script>
 
 <template>

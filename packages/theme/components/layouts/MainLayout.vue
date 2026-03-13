@@ -16,7 +16,7 @@ watch(
 		watcher = null;
 		scroll = null;
 		nextTick(() => {
-			const scroll = useScroll(sectionEl);
+			scroll = useScroll(sectionEl);
 			const { y } = scroll;
 
 			watcher = watch(

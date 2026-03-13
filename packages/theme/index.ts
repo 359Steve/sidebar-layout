@@ -7,7 +7,9 @@ import DocTable from './components/DocTable.vue';
 import ContentImage from './components/md/ContentImage.vue';
 import Layout from './Layout.vue';
 import 'vitepress/theme';
-import '../theme/css/style.css';
+import './css/style.css';
+
+export type { NavItemWithIcon, SocialWithColor, PressFooter, PressNotFound } from './types/vitepress-types';
 
 export default {
 	Layout,

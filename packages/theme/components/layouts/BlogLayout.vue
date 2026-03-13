@@ -73,7 +73,7 @@ const gatherList = computed(() => {
 				<div class="space-y-3">
 					<article v-for="post in group.posts" :key="post.url"
 						class="glass group cursor-pointer overflow-hidden rounded-lg border border-black/5 p-4 transition-all duration-200 dark:border-white/8"
-						@click="router.go(post.url)">
+						@click="post.url && router.go(post.url)">
 						<div class="flex flex-col gap-2">
 							<!-- 标题和日期 -->
 							<div class="flex items-start justify-between gap-4">

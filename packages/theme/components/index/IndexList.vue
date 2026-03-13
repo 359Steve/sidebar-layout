@@ -20,7 +20,7 @@ const filteredPosts = computed(() => {
 	<div v-if="filteredPosts && filteredPosts.length > 0" class="index-list grid w-full grid-cols-1 gap-5 sm:gap-6">
 		<div v-for="item in filteredPosts" :key="item.url"
 			class="glass flex w-full cursor-pointer flex-col overflow-hidden rounded-lg border border-black/5 shadow-md transition-all duration-200 dark:border-white/8"
-			@click="router.go(item.url)">
+			@click="item.url && router.go(item.url)">
 			<div class="bg-blog-primary relative aspect-video w-full shrink-0 overflow-hidden">
 				<img :src="item.cover" alt="博客封面" loading="lazy" decoding="async"
 					class="absolute inset-0 block h-full min-h-full w-full min-w-full object-cover object-center" />

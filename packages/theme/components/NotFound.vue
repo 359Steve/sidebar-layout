@@ -6,7 +6,7 @@ const { theme } = useData<{
 	notFound: PressNotFound;
 }>();
 
-const icon = computed(() => theme.value.notFound.icon);
+const icon = computed(() => theme.value.notFound?.icon ?? '');
 const css = reactive<CSSProperties>({
 	'background-image': icon.value,
 });
