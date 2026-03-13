@@ -1,0 +1,56 @@
+{
+	"name": "vitepress-sidebar-layout",
+	"version": "1.0.0",
+	"description": "vitepress 自定义主题",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs",
+			"types": "./dist/index.d.ts"
+		},
+		"./style.css": "./dist/style.css"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "vite build",
+		"prepublishOnly": "npm run build"
+	},
+	"peerDependencies": {
+		"vitepress": "^1.6.4",
+		"vue": ">=3.0.0"
+	},
+	"dependencies": {
+		"@iconify/vue": "^5.0.0",
+		"@unpic/placeholder": "^0.1.2",
+		"@vueuse/core": "^14.2.1",
+		"branch-canvas": "^1.0.2",
+		"exifreader": "^4.37.0",
+		"fast-glob": "^3.3.3",
+		"pathe": "^2.0.3",
+		"pinia": "^3.0.4",
+		"prompts": "^2.4.2",
+		"sharp": "^0.34.5",
+		"simple-git": "^3.33.0",
+		"unplugin-auto-import": "^21.0.0",
+		"unplugin-vue-components": "^31.0.0",
+		"vp-loading-indicator": "^1.0.0"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.2.1",
+		"@tailwindcss/vite": "^4.2.1",
+		"@types/node": "^25.5.0",
+		"@types/prompts": "^2.4.9",
+		"@vitejs/plugin-vue": "^5.0.0",
+		"postcss": "^8.5.8",
+		"prettier": "^3.8.1",
+		"prettier-plugin-tailwindcss": "^0.7.2",
+		"vite": "^5.0.0",
+		"vite-plugin-dts": "^4.5.4"
+	}
+}
